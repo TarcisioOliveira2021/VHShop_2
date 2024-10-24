@@ -1,7 +1,24 @@
-# vhshop_quarkus_1.0
+# Vhshop_quarkus_1.0
 
 ## 🌟 Descrição
 Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus. 
+
+## 🛠️ Estrutura do projeto 
+```plaintext
+├── Backend/                 
+│   ├── app/
+│      ├── src/
+│         ├── main/
+│         ├── test/
+|
+├── Frontend/
+│   ├── css/
+│   ├── html/
+│   ├── img/
+│   ├── js/
+|
+└── README.md 
+```
 
 ## 🚀 Como Usar
 1. **Instale uma IDE**:
@@ -11,7 +28,7 @@ Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus.
    - **Java 17**: Você precisará ter o Java 17 ou superior instalado em sua máquina.
 
 3. **Configuração do Banco de Dados**:
-   - Crie um arquivo `application.properties` em `Backend/main/resources` com as credenciais do banco de dados.
+   - Crie um arquivo `application.properties` em `Backend/app/src/main/resources` com as credenciais do banco de dados.
    - Exemplo:  
 
         `quarkus.datasource.db-kind=A`  
