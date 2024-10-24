@@ -43,4 +43,5 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 
 # Application Properties
-./src/main/resources/*
+/src/main/resources/application.properties
+/src/main/resources/application.ymal
