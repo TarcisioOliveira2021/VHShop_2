@@ -12,16 +12,23 @@ Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus.
 
 3. **Configuração do Banco de Dados**:
    - Crie um arquivo `application.properties` em `Backend/main/resources` com as credenciais do banco de dados.
-   - Exemplo: 
-        `
-        quarkus.datasource.db-kind=A
-        quarkus.datasource.username=B
-        quarkus.datasource.password=C
-        quarkus.datasource.devservices.port=D    
-        quarkus-jdbc-postgresql=E
-        quarkus.datasource.jdbc.url=jdbc:F        
-        quarkus.datasource.jdbc.max-size=G
-        `
+   - Exemplo:  
+
+        `quarkus.datasource.db-kind=A`  
+
+        `quarkus.datasource.username=B`
+     
+        `quarkus.datasource.password=C`
+     
+        `quarkus.datasource.devservices.port=D`
+         
+        `quarkus-jdbc-postgresql=E`
+     
+        `quarkus.datasource.jdbc.url=jdbc:F`
+             
+        `quarkus.datasource.jdbc.max-size=G`
+
+     - Para mais informações consulte: `https://quarkus.io/guides/datasource#jdbc-configuration` 
 
 4. **Comandos do Maven**:
    - Antes de rodar o projeto executar o maven clean install, caso tenha o maven na sua máquina, dentro da pasta do projeto execute no terminal: `mvn clean install`. Se não  basta usar o mvnm que esta no projeto `Backend/app`, executando o mesmo comando por `./mvmn clean install`.
