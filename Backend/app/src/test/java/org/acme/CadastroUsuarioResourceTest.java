@@ -1,14 +1,14 @@
 package org.acme;
 
-import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.acme.Entities.Usuario;
 import org.acme.Repositories.UsuarioRepository;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import io.quarkus.test.junit.QuarkusTest;
+import static io.restassured.RestAssured.given;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.core.MediaType;
 
@@ -28,6 +28,12 @@ class CadastroUsuarioResourceTest {
         UsuarioRepository repository = new UsuarioRepository();
         var usuario = repository.find("nome", usuarioCriado.getNome()).firstResult();
         repository.delete(usuario);
+    }
+
+    @Transactional
+    void persistirUsuario(Usuario usuario){
+        repository.persist(usuarioCriado);
+        repository.flush();
     }
 
     @Test
@@ -59,6 +65,7 @@ class CadastroUsuarioResourceTest {
     void naoDevePermitirCadastrarUsuario() {
         // Arrange
         usuarioCriado = new Usuario("testeTeste", "teste");
+        persistirUsuario(usuarioCriado);
 
         // Act
         given()
@@ -67,8 +74,9 @@ class CadastroUsuarioResourceTest {
                 .when()
                 .post("/cadastrarUsuario")
                 .then()
-                // Assert
                 .assertThat()
                 .statusCode(400).and().extract().response().asString().equals("Usuário já cadastrado.");
+
+        tearDown();
     }
 }
