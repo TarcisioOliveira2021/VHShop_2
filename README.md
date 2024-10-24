@@ -45,7 +45,7 @@ Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus.
              
         `quarkus.datasource.jdbc.max-size=G`
 
-     - Para mais informações consulte: `https://quarkus.io/guides/datasource#jdbc-configuration` 
+     - Para mais informações consulte: https://quarkus.io/guides/datasource#jdbc-configuration 
 
 4. **Comandos do Maven**:
    - Antes de rodar o projeto executar o maven clean install, caso tenha o maven na sua máquina, dentro da pasta do projeto execute no terminal: `mvn clean install`. Se não  basta usar o mvnm que esta no projeto `Backend/app`, executando o mesmo comando por `./mvmn clean install`.
