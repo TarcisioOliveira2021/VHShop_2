@@ -36,7 +36,8 @@ Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus.
    - Ele pode ser dividido em perfils, da forma que você melhor preferir. Para maiores informações consulte: https://quarkus.io/guides/config-reference#profiles
       - Para executar o `application.properties` em perfils diferentes basta: `./mvnw quarkus:NOME_PERFIL` ou `./mvnw quarkus:run -Dquarkus.profile:NOME_PROFILE` 
 
-   - Exemplo de configurações importantes para rodar esse projeto: 
+   - Exemplo de configurações importantes para rodar esse projeto:
+     
         `quarkus.datasource.db-kind=postgresql`
      
         `quarkus.datasource.username=XPTO`
