@@ -36,19 +36,29 @@ Aplicação de gerenciamento de locadora feita para testar conceitos do quarkus.
    - Ele pode ser dividido em perfils, da forma que você melhor preferir. Para maiores informações consulte: https://quarkus.io/guides/config-reference#profiles
       - Para executar o `application.properties` em perfils diferentes basta: `./mvnw quarkus:NOME_PERFIL` ou `./mvnw quarkus:run -Dquarkus.profile:NOME_PROFILE` 
 
-   - Exemplo de configurações importantes para rodar esse projeto:  
+   - Exemplo de configurações importantes para rodar esse projeto: 
         `quarkus.datasource.db-kind=postgresql`
+     
         `quarkus.datasource.username=XPTO`
+     
         `quarkus.datasource.password=XPTO`
+     
         `quarkus.datasource.jdbc.url=jdbc:XPTO`
+     
         `quarkus.datasource.jdbc.max-size=16`
+     
         `quarkus-jdbc-postgresql=org.postgresql.Driver`
 
         `quarkus.http.cors=true`
+     
         `quarkus.http.cors.origins=http://localhost:8081 #porta onde o frontend está rodando`
+     
         `quarkus.http.cors.methods=GET,PUT,POST,DELETE,OPTIONS`
+     
         `quarkus.hibernate-orm.database.generation=update`
+     
         `quarkus.http.cors.headers=Content-Type`
+     
         `quarkus.http.cors=true`
      
         
